@@ -3,11 +3,11 @@
     <img class='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="Netflix Logo"/>
     <div class='nav-div'>
         <ul class='nav-list'>
-            <li class='nav-item' @click="()=> navigate('/')"><span className="active" >Home</span></li>
-            <li class='nav-item'><span  @click="()=> navigate('/movies')">Movies</span></li>
-            <li class='nav-item'><span  href="">Tv Shows</span></li>
-            <li class='nav-item'><span  href="">Recently Added</span></li>
-            <li class='nav-item'><span  href="">My List</span></li>
+          <router-link to="/"><li class='nav-item'><span class="active" >Home</span></li></router-link>
+          <router-link to="/movies"><li class='nav-item'><span >Movies</span></li></router-link>
+          <router-link to=""><li class='nav-item'><span >Tv Shows</span></li></router-link>
+          <router-link to=""><li class='nav-item'><span >Recently Added</span></li></router-link>
+          <router-link to=""><li class='nav-item'><span >My List</span></li></router-link>
         </ul>
     </div>
     <img class='avatar' src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="Avatar" />
