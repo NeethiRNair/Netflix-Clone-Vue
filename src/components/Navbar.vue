@@ -45,9 +45,10 @@ export default {
   }
 
   .logo {
-      position: fixed;
       width: 80px;
       left: 20px;
+      height: 20px;
+      position: sticky;
   }
   .avatar {
       position: fixed;

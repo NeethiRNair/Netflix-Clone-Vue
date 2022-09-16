@@ -3,7 +3,7 @@
     <h2>{{title? title : ''}}</h2>
     <div class="posters">
       <div :key="index" v-for="(movie, index) in movies">
-        <img :class="isSmall? 'small-poster' : 'poster'" :src="movie? imageUrl+ movie.backdrop_path : ''" alt="Poster"/>
+        <img :class="isSmall? 'small-poster' : 'poster'" @click="$router.push(`details/${movie.id}`)" :src="movie? imageUrl+ movie.backdrop_path : ''" alt="Poster"/>
       </div>
     </div>
   </div>
