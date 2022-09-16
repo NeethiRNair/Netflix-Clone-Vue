@@ -1,12 +1,12 @@
 <template>
-  <div :style="{ backgroundImage: `url(${this.movie? this.imageUrl+ this.movie.backdrop_path : ''})` }" class='banner'>
+  <div :style="{ backgroundImage: `url(${movie? imageUrl+ movie.backdrop_path : ''})` }" class='banner'>
     <div class='content'>
-      <h1 class='title'>{{ this.movie.title? movie.title : movie.name }}</h1>
+      <h1 class='title'>{{ movie.title? movie.title : movie.name }}</h1>
       <div class='banner-buttons'>
           <button class='banner-btn'>Play</button>
           <button class='banner-btn'>My List</button>
       </div>
-      <h3 class='description'>{{this.movie ? this.movie.overview.substring(0, this.maxOverview)+'...' : ''}}</h3>
+      <h3 class='description'>{{movie ? movie.overview.substring(0, maxOverview)+'...' : ''}}</h3>
     </div>
     <div class="fade-bottom"></div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 import axios from '../axios'
-import {API_KEY, imageUrl} from '../constants/constants'
+import { API_KEY, imageUrl } from '../constants/constants'
 export default {
   name: 'Banner',
   data () {
@@ -29,7 +29,6 @@ export default {
       .then((response) => {
         const movieNum = Math.floor(Math.random() * (response.data.results.length - 1))
         this.movie = response.data.results[movieNum]
-        console.log(this.movie)
       })
   }
 }
@@ -42,7 +41,7 @@ export default {
       color: rgb(240, 240, 240);
   }
   .content{
-      padding-top: 140px;
+      padding-top: 142px;
       height: 190px;
       padding-left: 30px;
   }
